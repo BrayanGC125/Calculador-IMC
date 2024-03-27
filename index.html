@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -9,34 +10,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>JS Game</title>
+    <title>Calculadora IMC</title>
+
 </head>
 
 <body>
-
     <div class="container">
         <div class="container__contenido">
             <div class="container__informaciones">
+                <h1></h1>
                 <div class="container__texto">
-                    <h1></h1>
                     <p class="texto__parrafo"></p>
                 </div>
-                <input type="number" id="datosUsuario" min="1" max="10" class="container__input">
+                <div class="container-entradas">
+                    <label class="texto-input" for="datosUsuarioAltura">Ingrese su altura en mts :</label>
+                    <input type="number" id="datosUsuarioAltura" min="1" max="10" class="container__input" placeholder="1.55">
+                    <label class="texto-input" for="datosUsuarioPeso">Ingrese su peso en Kg :</label>
+                    <input type="number" id="datosUsuarioPeso" min="1" max="10" class="container__input" placeholder="55.55">
+                </div>
                 <div class="chute container__botones">
-                    <button onclick="ingresoDeDatosPeso();" class="container__boton" id="peso" >Ingreso Kg</button>
-                    <button onclick="ingresoDeDatosAltura()" class="container__boton" id="altura">Ingreso Mts</button>
                     <button onclick="calcularImc()" class="container__boton" id="calcular" >Calcular</button>
-                    <button onclick="reiniciarJuego();" class="container__boton" id="reiniciar" disabled>Reset</button>
+                    <button onclick="reiniciarJuego ();" class="container__boton" id="reiniciar" disabled>Reset</button>
                 </div>
             </div>
             <img src="./img/ia.png" alt="Una persona mirando a la izquierda" class="container__imagen-persona" />
         </div>
     </div>
 
-
-
-
-    <script src="app.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

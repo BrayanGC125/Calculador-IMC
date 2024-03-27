@@ -1,7 +1,5 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    
     color: white;
 }
 
@@ -12,7 +10,6 @@ body {
     align-items: center;
     justify-content: center;
 }
-
 
 body::before {
     background-image: url("img/code.png");
@@ -29,7 +26,7 @@ body::before {
 .container {
     width: 1200px;
     height: 600px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: space-between;
     border-radius: 24px;
@@ -38,19 +35,29 @@ body::before {
     background-image: url("img/Ruido.png");
     background-size: 100% 100%;
     position: relative;
+    row-gap: 0;
+    
 }
-
-
 .container__contenido {
     display: flex;
     align-items: center;
     position: absolute;
     bottom: 0;
+    gap: 2em;
+}
+
+.container__texto{
+    width: 500px;
+    height: 20px;
 }
 
 .container__informaciones {
     flex: 1;
-    padding: 3rem;
+    width: 500px;
+    height: 500px;
+    margin: auto 3rem;
+    
+
 }
 
 .container__boton {
@@ -62,23 +69,22 @@ body::before {
     font-weight: 700;
     border: none;
     margin-top: 2rem;
+    
 }
 
 .container__boton:disabled {
     background: #898989;
 }
 
-.container__texto {
-    margin: 16px 0 16px 0;
-}
 
-.container__texto-azul {
-    color: #1875E8;
+.container__botones {
+    display: flex;
+    gap: 2em;
 }
 
 .container__input {
-    width: 100%;
-    height: 72px;
+    width: 436px;
+    height: 7px;
     border-radius: 16px;
     background-color: #FFF;
     border: none;
@@ -87,25 +93,36 @@ body::before {
     font-size: 24px;
     font-weight: 700;
     font-family: 'Inter', sans-serif;
+    margin: 20px auto;
+    display: block;
 }
 
-.container__botones {
-    display: flex;
-    gap: 2em;
+.container__imagen-persona {
+    height: 600px;
+    flex: 2;
 }
 
 h1 {
     font-family: 'Chakra Petch', sans-serif;
-    font-size: 72px;
-    padding-bottom: 3rem;
+    font-size: 50px;
+    position: relative;
+    bottom: 49px;
+    
 }
 
-p,
-button {
+p, button {
     font-family: 'Inter', sans-serif;
 }
 
 .texto__parrafo {
-    font-size: 32px;
+    font-size: 25px;
     font-weight: 400;
+    position: relative;
+    bottom: 70px;
+}
+
+.texto-input {
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
 }
